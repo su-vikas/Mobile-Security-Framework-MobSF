@@ -22,7 +22,7 @@ def read_netsec_config(app_dir, config, src_type):
             xml_dir = base / 'apktool_out' / 'res' / 'xml'
         xmls = Path(xml_dir).glob('*.xml')
         for xml in xmls:
-            if xml.stem in [config, 'network_security_config']:
+            if xml.stem in [config]:
                 config_file = xml
                 break
         if not config_file:
